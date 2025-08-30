@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "DevnovateHub",
+      "path": "./devnovatehub"
+    }
+  ],
+  "settings": {
+    "typescript.preferences.quoteStyle": "single",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.git": true
+    }
+  }
+}
