@@ -86,12 +86,18 @@ app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT, () => {
-  console.log(`
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`
 🚀 DevnovateHub Backend Server
 📍 Environment: ${process.env.NODE_ENV}
 🌐 Server running on port ${PORT}
 📖 API Documentation: http://localhost:${PORT}/api-docs
 🔗 Frontend URL: ${process.env.FRONTEND_URL}
-  `)
-})
+    `)
+  })
+}
+
+// Export for Vercel
+export default app
